@@ -430,6 +430,99 @@ Get system performance metrics for monitoring and health checks.
 
 ---
 
+### 12. Real-Time Climate Stress & Weather Telemetry
+**GET** `/api/gis/weather?lat=19.0748&lng=82.0305&district=Bastar`
+
+Fetch real-time weather and infrastructure climate impact using the Open-Meteo free public API.
+
+**Parameters:**
+- `lat` (optional): Latitude (default: 19.0748)
+- `lng` (optional): Longitude (default: 82.0305)
+- `district` (optional): District name for context
+
+**Response:**
+```json
+{
+  "source": "Open-Meteo Public API (WMO Weather Models)",
+  "district": "Bastar",
+  "latitude": 19.0748,
+  "longitude": 82.0305,
+  "current": {
+    "temperature": 22.5,
+    "humidity": 88,
+    "precipitation": 0,
+    "windSpeed": 1.8,
+    "weatherCode": 1
+  },
+  "forecast": {
+    "maxTemp": 29.4,
+    "minTemp": 20.1,
+    "totalRainExpectedMm": 0.2
+  },
+  "climateRiskLevel": "Low",
+  "infrastructureImpact": "Normal operating conditions. Minimal weather-induced strain on civil assets.",
+  "timestamp": "2026-09-30T18:38:16.687Z"
+}
+```
+
+---
+
+### 13. OpenStreetMap Geocoding Search
+**GET** `/api/gis/geocode?q=Varanasi`
+
+Search and geolocate any Indian district, village, or town using the OpenStreetMap Nominatim free public API.
+
+**Parameters:**
+- `q` (required): Search query
+
+**Response:**
+```json
+{
+  "results": [
+    {
+      "name": "Varanasi",
+      "displayName": "Varanasi, Sadar, Varanasi, Uttar Pradesh, 221001, India",
+      "lat": 25.3356491,
+      "lng": 83.0076292,
+      "type": "administrative",
+      "class": "boundary"
+    }
+  ]
+}
+```
+
+---
+
+### 14. PM Gati Shakti National Infrastructure Corridors
+**GET** `/api/gis/layers`
+
+Get vector route layers for national multi-modal freight corridors, tribal connectivity grids, and water pipelines.
+
+**Response:**
+```json
+{
+  "corridors": [
+    {
+      "id": "CORR-EAST-COAST",
+      "name": "East Coast Dedicated Freight & Multi-Modal Corridor",
+      "scheme": "PM Gati Shakti Master Plan",
+      "type": "High-Speed Logistics & Feeder",
+      "status": "Active Execution",
+      "lengthKm": 1115,
+      "color": "#f59e0b",
+      "routePoints": [
+        [25.3176, 82.9739],
+        [23.3441, 85.3096],
+        [18.8286, 81.8797],
+        [18.1067, 83.3956]
+      ]
+    }
+  ]
+}
+```
+
+---
+
 ## 🔒 Error Handling
 
 All endpoints return consistent error responses:

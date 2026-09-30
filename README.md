@@ -103,38 +103,65 @@ Governments across India struggle to consolidate citizen feedback and align it w
 
 ### Prerequisites
 - Node.js v18+ (Node v20+ recommended)
-- npm v9+
+- npm v9+ (or Docker)
 
-### 1. Clone & Install Dependencies
+---
+
+### ⚡ Option A: 1-Minute Automated Setup (Recommended)
+
+Clone the repository and run the automated setup script:
 ```bash
 git clone https://github.com/your-repo/jansetu-ai.git
 cd jansetu-ai
 
-# Install server dependencies
-cd server && npm install && cd ..
-
-# Install client dependencies
-cd client && npm install && cd ..
+# 1-Click setup: installs all dependencies, configures .env, and builds the app
+npm run setup
 ```
 
-### 2. Configure Environment (Optional for Live Gemini Mode)
-Create a `.env` file in the `server` directory (or use the in-app Google AI Studio settings modal):
-```env
-PORT=5000
-GEMINI_API_KEY=your_google_ai_studio_api_key_here
-GEMINI_MODEL=gemini-2.5-flash
-```
-*Note: If no API key is provided, JanSetu AI automatically runs its high-fidelity offline multilingual intelligence engine.*
-
-### 3. Build & Run the Platform
+Once setup completes, choose your mode:
 ```bash
-# Build the client production bundle
-npm run build:client
+# 1. Hot-Reload Development Mode (starts both backend on :5000 & frontend on :5173):
+npm run dev
 
-# Start the unified JanSetu AI server
+# 2. Production Unified Server Mode (serves both API & Frontend on :5000):
 npm start
 ```
+Open **`http://localhost:5000`** (or **`http://localhost:5173`** for dev) in your browser!
+
+---
+
+### 🖥️ Option B: 1-Click Platform Installers
+
+- **Windows:** Double-click `setup.bat` or run `.\setup.ps1` in PowerShell.
+- **Linux / macOS / Cloud Shell:** Run `chmod +x setup.sh && ./setup.sh`.
+
+---
+
+### 🐳 Option C: Docker Compose (Zero Node.js Required)
+
+If you have Docker installed, launch the complete platform with a single command:
+```bash
+docker compose up --build
+```
 Open **`http://localhost:5000`** in your browser!
+
+---
+
+### 🔑 Environment Configuration (Dual-Mode AI Engine)
+
+JanSetu AI is engineered with **Dual-Mode Intelligence**:
+- **Offline High-Fidelity Engine (Default):** Works immediately with zero configuration and zero API keys for instant demos and offline environments.
+- **Live Google AI Studio Mode (Optional):** Copy `.env.example` to `server/.env` and add your Gemini API key:
+  ```bash
+  cp .env.example server/.env
+  ```
+  Edit `server/.env`:
+  ```env
+  PORT=5000
+  GEMINI_API_KEY=your_google_ai_studio_api_key_here
+  GEMINI_MODEL=gemini-2.5-flash
+  ```
+  *(You can also set or change your Google AI Studio API key at runtime via the in-app AI Studio settings modal!)*
 
 ---
 

@@ -98,6 +98,34 @@ export const CitizenVoicePortal: React.FC<Props> = ({
       district: "Baksa",
       category: "Rural Roads & Bridges",
       text: "শালবাড়ি গ্রামের কাঠের সাঁকোটি গত বন্যায় ভেঙে গেছে। বর্ষাকালে গ্রাম বিচ্ছিন্ন হয়ে পড়ে। অবিলম্বে একটি স্থায়ী পাকা কংক্রিট সেতু চাই।"
+    },
+    {
+      label: "Telugu (Vizianagaram Health)",
+      lang: "te",
+      district: "Vizianagaram",
+      category: "Healthcare Facility",
+      text: "సాలూరు గిరిజన ప్రాంత ప్రాథమిక ఆరోగ్య కేంద్రంలో విద్యుత్, ప్రసవ సౌకర్యాలు లేవు. పీఎం ఆయుష్మాన్ భారత్ కింద 24 గంటల క్లినిక్ మంజూరు చేయండి."
+    },
+    {
+      label: "Kannada (Raichur Water)",
+      lang: "kn",
+      district: "Raichur",
+      category: "Drinking Water",
+      text: "ಮಾನ್ವಿ ತಾಲೂಕಿನ ಕುರ್ಡಿ ಗ್ರಾಮದಲ್ಲಿ ಫ್ಲೋರೈಡ್ ಮುಕ್ತ ಶುದ್ಧ ಕುಡಿಯುವ ನೀರಿನ ಘಟಕ ಸ್ಥಗಿತಗೊಂಡಿದೆ. ಜಲ ಜೀವನ್ ಮಿಷನ್ ಅಡಿಯಲ್ಲಿ ಹೊಸ ಜಲಶುದ್ಧೀಕರಣ ಘಟಕ ಸ್ಥಾಪಿಸಿ."
+    },
+    {
+      label: "Gujarati (Dahod Solar)",
+      lang: "gu",
+      district: "Dahod",
+      category: "Electricity & Solar",
+      text: "ધાનપુર આદિવાસી ગામમાં પીએમ સૂર્ય ઘર યોજના હેઠળ સોલાર રૂફટોપ પેનલ લગાવો જેથી રાત્રે જંગલી જાનવરોથી રક્ષણ મળે અને અવિરત વીજળી રહે."
+    },
+    {
+      label: "Punjabi (Firozpur Drainage)",
+      lang: "pa",
+      district: "Firozpur",
+      category: "Drainage & Flood Control",
+      text: "ਸਤਲੁਜ ਦਰਿਆ ਦੇ ਹੜ੍ਹ ਕਾਰਨ ਮੱਖੂ ਬਲਾਕ ਦੇ ਖੇਤਾਂ ਵਿੱਚ ਪਾਣੀ ਭਰ ਗਿਆ ਹੈ। ਡਰੇਨਾਂ ਦੀ ਪੁਖਤਾ ਸਫ਼ਾਈ ਅਤੇ ਮਜ਼ਬੂਤ ਪੱਕਾ ਬੰਨ੍ਹ ਤੁਰੰਤ ਬਣਾਇਆ ਜਾਵੇ।"
     }
   ];
 

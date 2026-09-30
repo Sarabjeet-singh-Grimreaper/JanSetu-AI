@@ -1,12 +1,18 @@
 {
   "name": "jansetu-ai-platform",
   "version": "1.0.0",
+  "type": "module",
   "description": "JanSetu AI - Multilingual Citizen Feedback & National Infrastructure Intelligence Platform (Digital Public Good)",
   "scripts": {
+    "setup": "node scripts/setup.js",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -k -n \"SERVER,CLIENT\" -c \"cyan,green\" \"npm run dev:server\" \"npm run dev:client\"",
     "dev:client": "npm run dev --prefix client",
     "dev:server": "npm run dev --prefix server",
+    "build": "npm run build --prefix client",
     "build:client": "npm run build --prefix client",
-    "start": "node server/server.js"
+    "start": "node server/server.js",
+    "lint": "npm run lint --prefix client"
   },
   "keywords": [
     "digital-public-good",
@@ -16,5 +22,8 @@
     "infrastructure-ai"
   ],
   "author": "Code for Communities",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
 }
