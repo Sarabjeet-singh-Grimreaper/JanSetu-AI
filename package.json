@@ -1,0 +1,20 @@
+{
+  "name": "jansetu-ai-platform",
+  "version": "1.0.0",
+  "description": "JanSetu AI - Multilingual Citizen Feedback & National Infrastructure Intelligence Platform (Digital Public Good)",
+  "scripts": {
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "build:client": "npm run build --prefix client",
+    "start": "node server/server.js"
+  },
+  "keywords": [
+    "digital-public-good",
+    "gemini",
+    "india-dpi",
+    "pm-gati-shakti",
+    "infrastructure-ai"
+  ],
+  "author": "Code for Communities",
+  "license": "Apache-2.0"
+}
